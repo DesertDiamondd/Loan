@@ -1,1 +1,41 @@
 
+/**
+ * CarLoan extends the Loan class and sets and gets the VIN and whether or the 
+ * vehicle is newOrUsed, in addition to the functions of the Loan 
+ * class which is setting and getting the balance and 
+ * interest of the car loan.
+ *
+ * @DemondJacobs
+ * @April 9, 2022
+ */
+public class CarLoan extends Loan
+{
+    // instance variables - replace the example below with your own
+    private String VIN;
+    private String newOrUsed;
+    
+    public String getVIN()
+    {
+        return VIN;
+    }
+    public void setVIN(String newVIN)
+    {
+        VIN = newVIN;
+    }
+    
+    public String getNewOrUsed()
+    {
+        return newOrUsed;
+    }
+    public void setNewOrUsed(String isItNewOrUsed)
+    {
+        newOrUsed = isItNewOrUsed;
+    }
+    
+    @Override
+    public String loanInfo()
+    {
+        return super.loanInfo() + "," + VIN + " -- " + newOrUsed;
+    }
+    
+}
