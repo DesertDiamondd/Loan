@@ -1,0 +1,45 @@
+/**
+ * Loan class sets and gets the balance and interestRate, 
+ * caclculates interest, and returns loan info.
+ *
+ * DemondJacobs
+ * April 9, 2022
+ */
+ 
+public class Loan
+{
+    // instance variables - replace the example below with your own
+    protected double balance;
+    protected double interestRate;
+    
+
+    
+    public double getBalance()
+    {
+        return balance;
+    }
+    public void setBalance(double newBalance)
+    {
+        balance = newBalance;
+    }
+    
+    public double getInterestRate()
+    {
+     return interestRate;   
+    }
+    public void setInterestRate(double newInterestRate)
+    {
+        interestRate = newInterestRate;
+    }
+    
+    
+    public double addInterest()
+    {   balance = balance + (balance * interestRate);
+        return balance;
+    }
+    
+    public String loanInfo()
+    {
+        return balance + " -- " + interestRate;
+    }
+}
